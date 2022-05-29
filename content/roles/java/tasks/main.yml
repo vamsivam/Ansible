@@ -1,0 +1,10 @@
+---
+# tasks file for java
+    - name: Install the java
+      apt:
+          name: "{{ java_ubantu }}"
+          state: present
+          update_cache: yes
+
+
+

@@ -1,0 +1,10 @@
+[vamsi]
+172.31.21.163
+172.31.28.124
+[varsha]
+172.31.21.201
+172.31.30.135
+
+[all:vars]
+java_ubantu=openjdk-8-jdk
+

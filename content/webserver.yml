@@ -1,0 +1,20 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install the webserver apache
+      apt:
+          name: apache2
+          state: present
+          update_cache: yes 
+
+    - name: update index 
+      template:
+          src: /home/ansible/index.html.j2
+          dest: /var/www/html/index.html  
+
+    - name: service restart apache ubantu
+      service:
+        name: apache2
+        state: restarted
+
